@@ -1,0 +1,2 @@
+# mmCRM
+My minimalistic CRM
