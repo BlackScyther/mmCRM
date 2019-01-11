@@ -1,0 +1,10 @@
+{% extends "crm_base.html" %}
+
+{% block title %}Cases{% endblock %}
+
+{% block content %}
+    {% for case in crm_cases %}
+        <h2>{{ case.first_name }} {{ case.last_name }}</h2>
+        <p>author: {{ case.athor }}</p>
+    {% endfor %}
+{% endblock %}

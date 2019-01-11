@@ -1,0 +1,17 @@
+{% extends "crm/base.html" %}
+
+{% block title %}Interactions{% endblock %}
+
+{% block content %}
+
+    <div id="content">
+        <!-- interactions Post -->
+        <div class="card mb-4">
+        {% include 'crm/list_interactions.html' %}
+        </div>
+    </div>
+
+    <!-- Pagination -->
+    {% include 'crm/pagination.html' %}
+
+{% endblock content%}

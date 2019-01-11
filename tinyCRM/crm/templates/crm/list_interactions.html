@@ -1,0 +1,9 @@
+{% for interaction in crm_interactions %}
+    <div class="card-body">
+        <h2 class="card-title">{{ interaction.title }}</h2>
+        <p class="card-text">{{ interaction.content }}</p>
+    </div>
+    <div class="card-footer text-muted">
+        Posted on {{ interaction.date_created}}
+    </div>
+{% endfor %}
