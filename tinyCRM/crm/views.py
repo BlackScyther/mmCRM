@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
 crm_interactions = [
     {
@@ -13,10 +14,18 @@ crm_interactions = [
     }
 ]
 
-indexHtml = 'crm/interactions.html'
 
+@login_required
 def index(request):
     context = {
         'crm_interactions': crm_interactions
     }
-    return render(request, indexHtml, context)
+    return render(request, 'crm/interactions.html', context)
+
+
+@login_required
+def cases(request):
+    context = {
+        'crm_interactions': crm_interactions
+    }
+    return render(request, 'crm/cases.html', context)

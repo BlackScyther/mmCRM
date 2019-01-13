@@ -8,6 +8,7 @@ class Case(models.Model):
     date_created = models.DateField(auto_now_add=True)
     date_updated = models.DateField(auto_now=True)
 
+    @property
     def __str__(self):
         return self.last_name + ' ' + self.first_name
 
